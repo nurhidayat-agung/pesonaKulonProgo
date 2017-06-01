@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Pesona Kulon Progo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="google_maps_key">AIzaSyDdYGE4klH3iDKnL56QLa7RIi2zi-MVaL4</string>
+    <string name="facebook_app_id">1828841230777358</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem_ips"></string>
+    <string name="berita_title">Berita</string>
+    <string name="lokasi">Lokasi Dekat <b>Hutan Mangrove</b></string>
+    <string name="kalibirudesc">Hutan Kalibiru lokasinya ada di area Perbukitan Menoreh. Karena berada di kawasan perbukitan dengan ketinggian sekitar450 Mdpl membuat kawasan Kalibiru Kulon Progo ini memiliki udara yang sejuk serta masih segar karena belum tercemar oleh polusi udara.
+
+Hutan milik pemerintah ini kini dikelola oleh masyarakat sekitar dan dijadikan sebagai objek wisata alam dan wisata edukasi. Bagi anda yang tertarik untuk menikmati keindahan objek wisata alam Kalianget Kulon Progo sebaiknya mempersiapkan fisik anda terlebih dahulu. Karena tidak lengkap rasanya kalau ke Kalibiru anda tidak mencoba jalur trekking.</string>
+    <string name="towildesc">Di Kulon Progo kini ada jenis wisata baru yang mulai digandrungi banyak wisatawan yaitu wisata village tour atau lebih dikenal dengan nama blusukan di desa. Wisata ini menuntun pelancong menyusuri jalan-jalan di Desa Bantar, Kecamatan Sentolo yang masih asri. Terletak di ketinggian 682 meter di atas permukaan laut, desa ini telah tercantum di website chinci.com yang banyak mengulas lokasi tujuan wisata dunia.</string>
+    <string name="mangrovedesc">Secara administratif hutan mangrove pantai congot berada di dusun pasir mendit, Jangkaran, Temon, Kulonprogo, Yogyakarta. Letak dusun pasir mendit ini memang berada di sebelah barat sungai bogowonto tetai secara administratif masih masuk ke wilayah yogyakarta. Rute menuju ke hutan mangrove pantai congot sendiri sangat mudah. Dari kota jogja perjalanan di mulai dengan menuju jalan jogja-wates. Sampai di perbatasan kulon progo masih ke arah purworejo kurang lebih sekitar 20 km. sampai di patung kuda kota wates masih kebarat lagi. pertigaan terminal wates ambil kiri.</string>
+    <string name="congotdesc">Menjadi kabupaten paling barat di kota jogja rupanya kulon progo memiliki sebuah pantai di ujung barat yang memiliki keindahan yang cukup menarik. Pantai congot, Sebuah pantai yang sangat jarang di ekspos. Padahal pantai ini adalah salah satu pantai spot memancing yang banyak di datangi para pemancing dari luar daerah
+Ataukah mungkin kalah daengan pantai tetangga nya? saya rasa tidak juga. justru keindahan pantai glagah dan pantai congot memiliki ciri khas yang berbeda. Jika pantai glagah ada sebuah laguna, di pantai congot menjadi muara sungai bogowonto, apalagi di sebelah barat pantai congot sekarang terdapat wisata yang baru ngehits yaitu hutan mangrove pasir mendit.
+Pantai congot sendiri adalah salah satu pantai tempat berlabuhnya kapal nelayan penagkap ikan, Jadi bagi para pengunjung yang gemar makan ikan laut, saya rasa tidak salah untuk mengunjungi pantai congot sekedar untuk berwisata sambil belanja ikan segar yang tentunya bebas bahan pengawet.</string>
+    <string name="trisikdesc">Pantai Trisik terletak di titik koordinat -7.9748254 dan 110.1918931 yang secara administrasi termasuk dalam wilayah Kecamatan Galur, Kabupaten Kulonprogo, Provinsi Daerah Istimewa Yogyakarta. Dari kota Yogyakarta dapat ditempuh dalam waktu 1.5 jam perjalanan darat (dengan sepeda motor). Pantai Trisik cukup potensial untuk dijadikan objek wisata. Selain karena pasir pantai dan ombaknya yang bagus, kegiatan penduduknya juga dapat menarik wisatawan domestik maupun mancanegara.</string>
+    <string name="glagahdesc">Pantai Glagah merupakan pantai paling terkenal di Kulon Progo. Laguna dan pemecah ombaknya menjadi daya tarik unik yang tak ditemukan di pantai lain di Jogja. Berbentuk tetrapod, pemecah ombak yang berada di sisi kanan dan kiri dermaga tampak siap menghadapi ganasnya ombak Samudera Indonesia. Di atas tetrapod-tetrapod tersebut pulalah para pemancing biasanya melemparkan kail dan menunggu ikan layur, surung hingga pethek menyambar umpan. Waktu terbaik untuk mengunjungi Pantai Glagah adalah ketika bulan baru dan air laut pasang. Saat itu, kita dapat melihat atraksi ombak di pantai ini. Ombak akan menggulung-gulung hebat, pecah menghantam tetrapod dan buihnya menghambur ke dermaga. Jika berada di dekatnya, sensasinya seperti tiba-tiba kehujanan, namun airnya terasa asin. Meskipun tampak menyenangkan, berenang di pantai ini tidak disarankan. Selain ombaknya besar, karakteristik ombak pantai selatan Jogja merupakan ombak balik yang menarik ke arah laut sehingga sangat berbahaya untuk berenang. Tapi jangan berkecil hati, serunya bermain air masih bisa kita lampiaskan di Laguna Pantai Glagah. Terdapat banyak wahana bermain di sana, seperti perahu bebek, kano, hingga keliling laguna dengan menggunakan perahu nelayan. Suasana senja indah di dermaga pantai pun menjadi hal yang favorit yang tak boleh dilewatkan. Bagi penggemar fotografi, pemandangan ombak yang pecah oleh tetrapod dengan matahari tenggelam sebagai latarnya, terlalu indah bila tak diabadikan.</string>
+    <string name="welcome">Selamat Datang Kulon Progo</string>
+</resources>

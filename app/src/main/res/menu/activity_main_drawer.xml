@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_beranda"
+            android:icon="@drawable/ic_home_grey_700_18dp"
+            android:title="Beranda" />
+        <item
+            android:id="@+id/nav_favorit"
+            android:icon="@drawable/ic_star_grey_700_18dp"
+            android:title="Favorit" />
+        <item
+            android:id="@+id/nav_notifikasi"
+            android:icon="@drawable/ic_notifications_grey_700_18dp"
+            android:title="Notifikasi" />
+        <item
+            android:id="@+id/nav_kalender"
+            android:icon="@drawable/ic_date_range_grey_700_18dp"
+            android:title="Kelender Daerah" />
+        <item
+            android:id="@+id/nav_no_sos"
+            android:icon="@drawable/ic_call_grey_700_18dp"
+            android:title="Nomor SOS" />
+        <item
+            android:id="@+id/nav_kritik"
+            android:icon="@drawable/ic_chat_grey_700_18dp"
+            android:title="Kritik Dan Saran" />
+        <item
+            android:id="@+id/nav_bantuan"
+            android:icon="@drawable/ic_help_grey_700_18dp"
+            android:title="Bantuan" />
+
+    </group>
+
+</menu>
