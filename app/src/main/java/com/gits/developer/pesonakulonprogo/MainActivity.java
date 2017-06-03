@@ -15,8 +15,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
@@ -30,11 +32,13 @@ import com.facebook.login.widget.LoginButton;
 import com.gits.developer.pesonakulonprogo.model.LoginFBData;
 import com.gits.developer.pesonakulonprogo.ui.home.HomeFragment;
 import com.gits.developer.pesonakulonprogo.ui.kritiksaran.KritikSaranFragment;
+import com.gits.developer.pesonakulonprogo.util.SharedPref;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import butterknife.BindView;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, FacebookCallback<LoginResult> {
@@ -44,7 +48,10 @@ public class MainActivity extends AppCompatActivity
     private KritikSaranFragment kritikSaranFragment;
     private CallbackManager callbackManager;
     private LoginButton btnFb;
-    private String name = "";
+    public CircleImageView cImvNavProfile;
+    public TextView tvNavProfile;
+    public NavigationView navigationView;
+    private SharedPref sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +59,9 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //shared config
+        sharedPref = new SharedPref(MainActivity.this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -69,19 +79,35 @@ public class MainActivity extends AppCompatActivity
             @Override
             protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
                 if (currentAccessToken == null){
-                    Toast.makeText(MainActivity.this, "nah ini logout", Toast.LENGTH_SHORT).show();
+                    logOutData();
                 }
             }
         };
 
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        //nav config
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
         kritikSaranFragment = new KritikSaranFragment();
-
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+        //cara lama -- nav convig
+        cImvNavProfile = (CircleImageView) navigationView.getHeaderView(0).findViewById(R.id.cimv_nav_profile);
+        tvNavProfile = (TextView) navigationView.getHeaderView(0).findViewById(R.id.tv_nav_name);
+
+        //fb initialization
+        if (sharedPref.isLogin()){
+            loadProfile();
+        }else {
+            logOutData();
+        }
+    }
+
+    private void logOutData() {
+        sharedPref.setLogin(false);
+        tvNavProfile.setText("Silahkan Login Facebook");
+        cImvNavProfile.setImageResource(R.drawable.icon_person);
+        LoginManager.getInstance().logOut();
     }
 
     @Override
@@ -147,13 +173,10 @@ public class MainActivity extends AppCompatActivity
     public void onSuccess(LoginResult loginResult) {
         GraphRequest graphRequest = GraphRequest.newMeRequest(loginResult.getAccessToken(),(object, response) -> {
             LoginFBData loginFBData = new LoginFBData();
-            Log.d("cek", "email : "+getValueFromJson(object,"email"));
-            Log.d("cek", "name : "+getValueFromJson(object,"name"));
-            Log.d("cek","gender : "+getValueFromJson(object,"gender"));
-            Log.d("cek","https://graph.facebook.com/" + getValueFromJson(object, "id") + "/picture?type=large");
-            Log.d("cek", "birthday : " + getValueFromJson(object,"birthday"));
-            name = getValueFromJson(object,"name");
-            Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
+            String avatarUrl = "https://graph.facebook.com/" + getValueFromJson(object, "id") + "/picture?type=large";
+            String username = getValueFromJson(object,"name");
+            saveProfileToPref(username, avatarUrl);
+            loadProfile();
             //LoginManager.getInstance().logOut();
         });
         Bundle bundle = new Bundle();
@@ -161,6 +184,20 @@ public class MainActivity extends AppCompatActivity
         graphRequest.setParameters(bundle);
         graphRequest.executeAsync();
 
+    }
+
+    private void loadProfile() {
+        tvNavProfile.setText(sharedPref.getUsername());
+        Glide.with(MainActivity.this)
+                .load(sharedPref.getImgUrl())
+                .fitCenter()
+                .into(cImvNavProfile);
+    }
+
+    private void saveProfileToPref(String username, String avatarUrl) {
+        sharedPref.setUsername(username);
+        sharedPref.setImgUrl(avatarUrl);
+        sharedPref.setLogin(true);
     }
 
     @Override

@@ -7,4 +7,7 @@ package com.gits.developer.pesonakulonprogo.util;
 public class NameTag {
     public static final String MARKERDATA = "markerData";
     public static final String TAG_APP_SHARED_PREF = "e_holiday";
+    public static final String imgUrl = "imgUrl";
+    public static final String username = "username";
+    public static final String isLogin = "isLogin";
 }
