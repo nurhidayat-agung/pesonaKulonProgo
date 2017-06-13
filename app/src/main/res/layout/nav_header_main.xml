@@ -19,7 +19,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:src="@drawable/icon_person"/>
+        android:background="@drawable/icon_person"/>
 
     <TextView
         android:id="@+id/tv_nav_name"
@@ -27,6 +27,8 @@
         android:layout_height="wrap_content"
         android:paddingTop="7dp"
         android:text="Login FaceBook Terlebih dahulu"
+        android:textColor="@color/com_facebook_button_border_color_focused"
+        android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 

@@ -10,4 +10,8 @@ public class NameTag {
     public static final String imgUrl = "imgUrl";
     public static final String username = "username";
     public static final String isLogin = "isLogin";
+    public static final String detailPlace = "detailPlace";
+    public static final String listPlace = "listPlace";
+    public static final String detailNews = "detailNews";
+
 }

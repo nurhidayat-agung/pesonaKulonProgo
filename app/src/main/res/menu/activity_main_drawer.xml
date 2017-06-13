@@ -7,9 +7,9 @@
             android:icon="@drawable/ic_home_grey_700_18dp"
             android:title="Beranda" />
         <item
-            android:id="@+id/nav_favorit"
+            android:id="@+id/nav_plan_your_trip"
             android:icon="@drawable/ic_star_grey_700_18dp"
-            android:title="Favorit" />
+            android:title="Plan Your Trip" />
         <item
             android:id="@+id/nav_notifikasi"
             android:icon="@drawable/ic_notifications_grey_700_18dp"

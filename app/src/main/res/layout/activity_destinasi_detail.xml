@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.gits.developer.pesonayogyakarta.com.gits.developer.pesonakulonprogo.ui.home.DestinasiDetailActivity">
+    tools:context="com.gits.developer.pesonakulonprogo.ui.home.DestinasiDetailActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"

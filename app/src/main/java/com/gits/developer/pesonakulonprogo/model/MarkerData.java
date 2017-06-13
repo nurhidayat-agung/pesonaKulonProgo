@@ -1,5 +1,9 @@
 package com.gits.developer.pesonakulonprogo.model;
 
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.internal.zzf;
+
 import java.io.Serializable;
 
 /**
@@ -7,11 +11,13 @@ import java.io.Serializable;
  */
 
 public class MarkerData implements Serializable {
+
     private String desc;
     private int image;
     private String title;
     private double longt;
     private double lat;
+
 
     public String getDesc() {
         return desc;

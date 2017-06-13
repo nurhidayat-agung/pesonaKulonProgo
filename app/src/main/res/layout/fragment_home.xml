@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.gits.developer.pesonayogyakarta.com.gits.developer.pesonakulonprogo.ui.home.HomeFragment">
+    tools:context="com.gits.developer.pesonakulonprogo.ui.home.HomeFragment">
 
     <fragment
         android:id="@+id/map"

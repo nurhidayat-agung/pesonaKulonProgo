@@ -3,6 +3,11 @@ package com.gits.developer.pesonakulonprogo.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.google.gson.Gson;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by kazt on 31/05/17.
  */
@@ -11,6 +16,9 @@ public class SharedPref {
     private SharedPreferences sp;
     private SharedPreferences.Editor spe;
     private Context c;
+
+    final String KEY_IS_FIRST_USE = "isFirstUse";
+    final String KEY_IS_LOGGED_IN = "isLoggedIn";
 
     public SharedPref(Context context) {
         this.sp = context.getSharedPreferences(NameTag.TAG_APP_SHARED_PREF, Context.MODE_PRIVATE);
@@ -44,4 +52,5 @@ public class SharedPref {
     public String getImgUrl(){
         return sp.getString(NameTag.imgUrl,"");
     }
+
 }

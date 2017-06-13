@@ -4,9 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin"
-    tools:context="com.gits.developer.pesonayogyakarta.com.gits.developer.pesonakulonprogo.ui.kritiksaran.KritikSaranFragment">
+    tools:context="com.gits.developer.pesonakulonprogo.ui.kritiksaran.KritikSaranFragment">
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
@@ -32,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_marginTop="30dp"

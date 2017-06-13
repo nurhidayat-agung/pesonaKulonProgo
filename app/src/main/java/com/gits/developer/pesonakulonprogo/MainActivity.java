@@ -24,14 +24,17 @@ import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.Profile;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.gits.developer.pesonakulonprogo.model.LoginFBData;
+import com.gits.developer.pesonakulonprogo.ui.calendar.Calendar;
 import com.gits.developer.pesonakulonprogo.ui.home.HomeFragment;
 import com.gits.developer.pesonakulonprogo.ui.kritiksaran.KritikSaranFragment;
+import com.gits.developer.pesonakulonprogo.ui.plan.PlanYourTrip;
 import com.gits.developer.pesonakulonprogo.util.SharedPref;
 
 import org.json.JSONException;
@@ -100,6 +103,8 @@ public class MainActivity extends AppCompatActivity
             loadProfile();
         }else {
             logOutData();
+            cImvNavProfile.setImageResource(R.drawable.icon_person);
+            tvNavProfile.setText("Silahkan Login Facebook Dulu");
         }
     }
 
@@ -153,6 +158,12 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_beranda:
                 fragment = new HomeFragment();
                 break;
+            case R.id.nav_kalender:
+                fragment = new Calendar();
+                break;
+            case R.id.nav_plan_your_trip:
+                fragment = new PlanYourTrip();
+                break;
         }
 
         if(fragment != null)
@@ -190,7 +201,6 @@ public class MainActivity extends AppCompatActivity
         tvNavProfile.setText(sharedPref.getUsername());
         Glide.with(MainActivity.this)
                 .load(sharedPref.getImgUrl())
-                .fitCenter()
                 .into(cImvNavProfile);
     }
 

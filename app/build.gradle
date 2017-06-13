@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
 
+
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -23,7 +25,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    dataBinding{
+    dataBinding {
         enabled true
     }
     dexOptions {
@@ -47,15 +49,13 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.jakewharton:butterknife:8.5.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile files('libs/activation.jar')
     compile files('libs/additionnal.jar')
     compile files('libs/mail.jar')
-    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+
+    compile 'com.jakewharton:butterknife:8.5.1'
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support:design:25.1.0'
-    compile 'com.jakewharton:butterknife:8.2.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.android.support:support-v4:25.1.0'
     compile 'com.google.android.gms:play-services:10.0.0'
@@ -64,11 +64,19 @@ dependencies {
     compile 'com.google.android.gms:play-services-auth:10.0.0'
     compile 'pub.devrel:easypermissions:0.1.5'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-    androidTestCompile 'org.testng:testng:6.9.6'
+    compile 'io.reactivex:rxjava:1.2.9'
+    compile 'io.reactivex:rxandroid:1.2.1'
     compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
-    compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
     compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    compile 'com.android.support:recyclerview-v7:25.1.1'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile 'com.github.sundeepk:compact-calendar-view:2.0.2.1'
+    compile 'com.github.MFlisar:DragSelectRecyclerView:0.3'
+    compile 'com.github.GauravChaddha1996:CDSRecyclerView:1.0'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'org.testng:testng:6.9.6'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 }

@@ -13,12 +13,15 @@
             android:src="@drawable/logo_pemerintah"
             android:scaleType="centerCrop"
             android:layout_width="match_parent"
-            android:layout_height="180dp" />
+            android:layout_height="180dp"
+            android:id="@+id/iv_berita_top"/>
         <TextView
             android:textStyle="bold"
             android:padding="9dp"
             android:text="Bupati Yogyakarta Menghadiri Upacara Pembukaan Kemerdekaan Indonesia Pertama"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:id="@+id/tv_berita_header"/>
     </LinearLayout>
 </android.support.v7.widget.CardView>
