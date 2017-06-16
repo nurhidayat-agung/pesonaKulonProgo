@@ -32,6 +32,7 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.gits.developer.pesonakulonprogo.model.LoginFBData;
 import com.gits.developer.pesonakulonprogo.ui.calendar.Calendar;
+import com.gits.developer.pesonakulonprogo.ui.help.HelpFragment;
 import com.gits.developer.pesonakulonprogo.ui.home.HomeFragment;
 import com.gits.developer.pesonakulonprogo.ui.kritiksaran.KritikSaranFragment;
 import com.gits.developer.pesonakulonprogo.ui.plan.PlanYourTrip;
@@ -163,6 +164,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_plan_your_trip:
                 fragment = new PlanYourTrip();
+                break;
+            case R.id.nav_bantuan:
+                fragment = new HelpFragment();
                 break;
         }
 
