@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:paddingTop="7dp"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"
+        android:background="@color/sinch_light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_white_20dp"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Tutorial Aplikasi"
+                android:layout_toLeftOf="@+id/img_arrow"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_inflate_help_mainmenu"/>
+            <ImageView
+                android:id="@+id/img_arrow"
+                android:src="@drawable/ic_keyboard_arrow_right_grey_700_24dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

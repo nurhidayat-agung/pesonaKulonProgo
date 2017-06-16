@@ -2,6 +2,7 @@ package com.gits.developer.pesonakulonprogo.util;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.widget.Toast;
 
 /**
  * Created by kazt on 04/06/17.
@@ -27,6 +28,10 @@ public class PDialog {
         if (progressDialog.isShowing()){
             progressDialog.dismiss();
         }
+    }
+
+    public void fail(){
+        Toast.makeText(context, "koneksi gagal", Toast.LENGTH_SHORT).show();
     }
 
 
